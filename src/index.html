@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Modern eCommerce</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="brand">ShopEase</div>
+        <nav class="menu">
+          <a href="#products">Products</a>
+          <a href="#features">Features</a>
+          <a href="#newsletter">Newsletter</a>
+        </nav>
+        <button id="cart-button" class="cart-button" aria-label="Open cart">
+          Cart <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Discover everyday essentials with premium quality</h1>
+          <p>
+            Browse curated products, add favorites to cart, and checkout in
+            seconds.
+          </p>
+          <a href="#products" class="btn">Shop now</a>
+        </div>
+      </section>
+
+      <section id="features" class="container features">
+        <article>
+          <h3>Free Shipping</h3>
+          <p>On orders above $50 with fast delivery.</p>
+        </article>
+        <article>
+          <h3>Secure Payments</h3>
+          <p>Checkout protected with modern security standards.</p>
+        </article>
+        <article>
+          <h3>Easy Returns</h3>
+          <p>Return products within 10 days with no hassle.</p>
+        </article>
+      </section>
+
+      <section id="products" class="container products-section">
+        <div class="products-head">
+          <h2>Popular Products</h2>
+          <div class="controls">
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search products..."
+            />
+            <select id="category-filter">
+              <option value="all">All categories</option>
+            </select>
+          </div>
+        </div>
+        <div id="products-grid" class="products-grid"></div>
+      </section>
+
+      <section id="newsletter" class="newsletter">
+        <div class="container">
+          <h2>Get weekly deals</h2>
+          <p>Subscribe for exclusive offers and product drops.</p>
+          <form id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="newsletter-message" class="newsletter-message"></p>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cart-drawer" class="cart-drawer">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" aria-label="Close cart">X</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <p>Total: <strong id="cart-total">$0.00</strong></p>
+        <button id="checkout-btn" class="btn full-width">Checkout</button>
+      </div>
+    </aside>
+    <div id="backdrop" class="backdrop"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
